@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!--开启aop的自动动态代理-->
+    <aop:aspectj-autoproxy/>
+    <!--开启Spring的自动扫描-->
+    <context:component-scan base-package="org.lanqiao"/>
+
+<!--&lt;!&ndash;目标对象&ndash;&gt;-->
+    <!--<bean id="userservice" class="org.lanqiao.service.UserService"></bean>-->
+    <!--&lt;!&ndash;切面&ndash;&gt;-->
+    <!--<bean id="myaspect" class="org.lanqiao.aop.MyAspect"></bean>-->
+<!--<aop:config>-->
+    <!--&lt;!&ndash;定义切入点&ndash;&gt;-->
+    <!--<aop:pointcut id="doSomePointcut" expression="execution(* *..UserService.doSome(..))"></aop:pointcut>-->
+    <!--<aop:pointcut id="doOtherPointcut" expression="execution(* *..UserService.doOther())"></aop:pointcut>-->
+<!--&lt;!&ndash;定义切面&ndash;&gt;-->
+    <!--<aop:aspect ref="myaspect">-->
+        <!--&lt;!&ndash;前置通知&ndash;&gt;-->
+        <!--<aop:before method="myTranction" pointcut-ref="doSomePointcut"></aop:before>-->
+        <!--&lt;!&ndash;返回通知&ndash;&gt;-->
+        <!--&lt;!&ndash;<aop:after-returning method="returnAdvice" pointcut-ref="doSomePointcut" returning="resulet"></aop:after-returning>&ndash;&gt;-->
+        <!--&lt;!&ndash;异常通知&ndash;&gt;-->
+        <!--<aop:after-throwing method="throwAdvice" pointcut-ref="doSomePointcut" throwing="e"></aop:after-throwing>-->
+    <!--&lt;!&ndash;最终通知&ndash;&gt;-->
+        <!--<aop:after method="logRecord" pointcut-ref="doOtherPointcut"></aop:after>-->
+        <!--&lt;!&ndash;环绕通知&ndash;&gt;-->
+        <!--<aop:around method="aroundAdvice" pointcut-ref="doOtherPointcut"></aop:around>-->
+    <!--</aop:aspect>-->
+<!--</aop:config>-->
+
+</beans>
